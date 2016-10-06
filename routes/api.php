@@ -16,3 +16,15 @@ use Illuminate\Http\Request;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
+
+
+Route::get('test-events', function(Request $request){
+	$arr = [
+		'events' => [
+			['name' => 'test', 'start_date'=> '10/6/2016', 'end_date'=>'10/26/2016'],
+			['name' => 'test', 'start_date'=> '10/6/2016', 'end_date'=>'10/26/2016'],
+			['name' => 'test', 'start_date'=> '10/6/2016', 'end_date'=>'10/26/2016']
+		]
+	];
+	return $arr;
+});
