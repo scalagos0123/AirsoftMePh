@@ -14,6 +14,8 @@ require('laravel-elixir-vue');
  */
 
 elixir(mix => {
-    mix.sass('app.scss')
-       .webpack('app.js');
+    mix.sass(['../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss'], 'public/css/app.css')
+       .scripts(['../../../vendor/bower_components/jquery/dist/jquery.js', '../../../node_modules/bootstrap-sass/assets/javascripts/bootstrap.js', '../../../vendor/bower_components/moment/moment.js', '../../../vendor/bower_components/fullcalendar/dist/fullcalendar.js'], 'public/js/app.js')
+       .styles(['../../../vendor/bower_components/fullcalendar/dist/fullcalendar.css', '../../../vendor/bower_components/fullcalendar/dist/fullcalendar.print.css'], 'public/css/app.css');
+
 });
