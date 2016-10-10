@@ -19,12 +19,8 @@ Route::get('/user', function (Request $request) {
 
 
 Route::get('test-events', function(Request $request){
-	$arr = [
-		'events' => [
-			['name' => 'test', 'start_date'=> '10/6/2016', 'end_date'=>'10/26/2016'],
-			['name' => 'test', 'start_date'=> '10/6/2016', 'end_date'=>'10/26/2016'],
-			['name' => 'test', 'start_date'=> '10/6/2016', 'end_date'=>'10/26/2016']
-		]
+	$arr = ['event' => 
+		['title' => 'test', 'start'=> '2016-10-06', 'allDay'=> 'true']
 	];
-	return $arr;
+	return json_encode($arr);
 });

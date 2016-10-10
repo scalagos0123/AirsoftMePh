@@ -15,15 +15,9 @@
 
         <script>
             $("#calendar").fullCalendar({
-                events: [
+                eventSources: [
                     {
-                        title: 'sample event',
-                        start:'2016-10-06'
-                    },
-                    {
-                        title:'event #2',
-                        start:'2016-10-06',
-                        end: '2016-10-09'
+                        url: '/api/test-events' // use the `url` property
                     }
                 ]
             });
